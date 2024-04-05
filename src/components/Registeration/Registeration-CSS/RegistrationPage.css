@@ -1,0 +1,85 @@
+.registration-container {
+    max-width: 100%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 700px;
+    
+  }
+  
+  label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-control {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  select.form-control {
+    appearance: none;
+    background: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+  }
+  
+  input[type="submit"],
+  button.register-btn,
+  button.login-btn {
+    width: calc(100% - 22px);
+    padding: 10px;
+    background: linear-gradient(to right, #001f3f, #003366);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="submit"]:hover,
+  button.register-btn:hover,
+  button.login-btn:hover {
+    background: linear-gradient(to right, #003366, #001f3f);
+  }
+  
+  .link {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    background-color: #f2dede;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ebccd1;
+  }
+  

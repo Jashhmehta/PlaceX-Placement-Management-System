@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.page-heading {
+  font-size: 32px; 
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: navy;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.filter-label {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.filter-input {
+  width: 90%;
+  padding: 10px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 15px; /* Increased font size */
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #5C6B9C;
+  box-shadow: 0 0 0 2px rgba(0, 0, 77, 0.2);
+}
+
+.filter-button {
+  padding: 14px 20px; /* Increased padding */
+  margin-top: 20px;
+  background-color: #00004d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px; /* Increased font size */
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-spacing {
+  margin-right: 10px;
+}
+.filter-button:hover {
+  background-color: #5C6B9C;
+}
+
+.user-table {
+  width: 9%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fadeInTable 1s ease-in-out forwards;
+}
+
+.user-table th {
+  background-color: #4200e9;
+  font-weight: bold;
+  padding: 14px;
+  font-size: 18px; 
+  font-family: 'Roboto', sans-serif;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 10px; /* Increased padding */
+  font-size: 16.4px; /* Increased font size */
+  font-family: 'Roboto', sans-serif;
+}
+
+.download-button {
+  margin-top: 20px;
+  padding: 14px 28px; /* Increased padding */
+  background-color: #00004d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px; /* Increased font size */
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #5C6B9C;
+}
+
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

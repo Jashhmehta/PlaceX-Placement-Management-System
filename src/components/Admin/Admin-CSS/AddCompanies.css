@@ -1,0 +1,45 @@
+.form-container {
+    display: flex;
+    justify-content: flex-end; /* Align form container to the right */
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    width: 90%;
+    margin-right: 150px;
+    margin-top: -70px; /* Adjust the margin-top as needed */
+}
+
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Card background color */
+    width: 100%; /* Increase the width of the card */
+    max-width: 800px; /* Set maximum width to prevent it from becoming too wide */
+    height: 650px; /* Fixed height for the container */
+    overflow-y: auto; /* Make the card scrollable */
+}
+
+.card::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Light border color */
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: calc(100% - 20px); /* Make inputs take full width, considering padding */
+    margin-bottom: 15px; /* Add some bottom margin to inputs for spacing */
+}
+
+.form-control:focus {
+    border-color: #87CEFA; /* Light navy blue effect when focused */
+}
+
+.btn-primary {
+    width: 100%; /* Make submit button take full width */
+}
+
+.img-fluid {
+    animation: fadeInImage 1s ease-in-out forwards;
+  }

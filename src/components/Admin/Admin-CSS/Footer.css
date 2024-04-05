@@ -1,0 +1,94 @@
+.footer-container {
+    width: 100%;
+    background-color: navy;
+   
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    height: "80px";
+    color: white; /* Set text color to white for better visibility */
+    margin: 0; /* Remove default margin */
+    left: 0;
+  }
+  
+  .footer-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .footer-section-columns {
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+  }
+  
+  #legal-links {
+    margin-left: auto; /* Push legal links to the right */
+  }
+
+  .founders-section {
+    padding: 2rem;
+  }
+  
+  .founders-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 70px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif; /* Change font family as desired */
+    text-align: center;
+  }
+  
+  .founders-section ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+  }
+  
+  .founders-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Larger text size */
+    color: #f7d154; /* Yellow shade color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Georgia', serif; /* Change font family as desired */
+    font-style: italic; /* Add italic font style */
+    text-align: center;
+    margin-right: 80px;
+  }
+  
+
+
+
+  .founders-section-2 {
+    padding: 2rem;
+  }
+  
+  .founders-section-2 h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 20px;
+    font-family: 'Arial', sans-serif; /* Change font family as desired */
+    text-align: center;
+  }
+  
+  .founders-section-2 ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+  }
+  
+  .founders-section-2 ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Larger text size */
+    color: #f7d154; /* Yellow shade color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Georgia', serif; /* Change font family as desired */
+    font-style: italic; /* Add italic font style */
+    text-align: center;
+    margin-left: 40px;
+  }
+  
+  /* Other styles remain unchanged */
+  

@@ -1,0 +1,141 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header-image {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+}
+
+.faq-heading {
+    font-size: 3rem;
+    color: navy;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.bloc-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs:hover {
+    background-color: #8982d5;
+}
+
+.active-tabs {
+    background-color: #26268c;
+    color: #fff;
+}
+
+.content-tabs {
+    animation: fadeIn 0.9s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.content div {
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.accordion {
+    max-width: 800px; /* Increase maximum width */
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.accordion-title {
+    background-color: #1a1c4b;
+    padding: 15px;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+    color: #f7f2f8;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title::after {
+    content: '\25B8';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #fffcfc;
+    color: #333;
+    transition: max-height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.accordion-item.active .accordion-title {
+    background-color: #a88adc;
+}
+
+.accordion-item.active .accordion-title::after {
+    content: '\25BE';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 15px;
+}

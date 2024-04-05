@@ -1,0 +1,94 @@
+
+.welcome-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./nmims3.jpg');
+  border-radius: 100px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  animation: fadeInFooter 1s ease-in-out forwards;
+}
+
+.welcome-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  opacity: 0.8;
+  animation: fadeInImage 2s ease-in-out forwards;
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 1;
+  animation: slideInText 2s ease-in-out forwards; /* Add animation to text */
+}
+
+.overlay-text h1,
+.overlay-text p {
+  margin: 0;
+  color: white;
+}
+
+.overlay-text h1 {
+  font-size: 3em;
+  font-weight: bold;
+  animation: fadeInUp 2s ease-in-out forwards; /* Add animation to heading */
+}
+
+.overlay-text p {
+  font-size: 1.5em;
+  animation: fadeInUp 2s ease-in-out forwards; /* Add animation to paragraph */
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInText {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

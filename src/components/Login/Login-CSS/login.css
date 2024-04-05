@@ -1,0 +1,77 @@
+/* login.css */
+
+body {
+    background-color: #f0f0f0; /* Set a background color for the entire page */
+}
+
+.container1 {
+    max-width: 750px; /* Reduce the width of the login form */
+    margin: 50px auto;
+    background: #fff; /* Add a background color behind the login form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+button.register-btn {
+    width: calc(100% - 22px);
+    margin-bottom: 10px; /* Add margin to create space between buttons */
+    padding: 10px;
+    background: linear-gradient(to right, #001f3f, #003366); /* Change button color to navy blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button.register-btn:hover {
+    background: linear-gradient(to right, #003366, #001f3f);
+}
+
+.link {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.error-message {
+    color: #d9534f; /* Bootstrap danger color for a more noticeable error message */
+    background-color: #f2dede; /* Background color for error message */
+    padding: 10px;
+    border-radius: 5px;
+    width: 677px;
+    margin-bottom: 15px;
+    border: 1px solid #ebccd1;
+}

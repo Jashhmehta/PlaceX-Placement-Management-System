@@ -1,0 +1,69 @@
+.header-title {
+    margin-top: 150px; /* Apply margin-top to h2 */
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif; /* Example font family */
+  }
+  
+  /* Add border to the Add + button */
+  .btn-add {
+    border: 2px solid #007bff; /* Example border color */
+  }
+  
+  /* Add border to the table */
+  .table-bordered {
+    border: 2px solid #dee2e6; /* Example border color */
+  }
+  
+  /* Animation for images */
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for table */
+  @keyframes fadeInTable {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animation for buttons */
+  @keyframes fadeInButton {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply image animation */
+  .img-fluid {
+    animation: fadeInImage 1s ease-in-out forwards;
+  }
+  
+  /* Apply table animation */
+  .table {
+    animation: fadeInTable 1s ease-in-out forwards;
+  }
+  
+  /* Apply button animation */
+  .btn {
+    animation: fadeInButton 1s ease-in-out forwards;
+    background-color: #00004d;
+  }
+  

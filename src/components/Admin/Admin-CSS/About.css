@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+  }
+  
+  .card {
+    width: 18rem;
+    margin-right: 50px; /* Adjust spacing here */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:last-child {
+    margin-right: 0; /* Remove margin from the last card */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
