@@ -1,18 +1,3 @@
-## Screenshots
-
-1. ![Screenshot 1](https://drive.google.com/uc?id=1PHad1i7O1ZIwmC_bw1WqZJAIeuWw8atz)
-2. ![Screenshot 2](https://drive.google.com/uc?id=1kd_iAp2kLYEjjUfLtnzmHPmluTxh63vz)
-3. ![Screenshot 3](https://drive.google.com/uc?id=1iPKTH_o5S6fZsggqKHACE9CrZtRXylHD)
-4. ![Screenshot 4](https://drive.google.com/uc?id=1_ymdSPuBByN_GZupSsXfC3tCklioEzf2)
-5. ![Screenshot 5](https://drive.google.com/uc?id=1U73tMQatPZ3JDR5E3AgRSIxukZ0k9faz)
-6. ![Screenshot 6](https://drive.google.com/uc?id=1LprXx3bFmcVNjkXVu4H_bceQzA0S-ldH)
-7. ![Screenshot 7](https://drive.google.com/uc?id=1bi_xR59A0guLGA7uHttec250meI5Rks4)
-8. ![Screenshot 8](https://drive.google.com/uc?id=1_NGkrq8a_lTh5f6xR3taaMlLyVrtTm6o)
-9. ![Screenshot 9](https://drive.google.com/uc?id=10-UfStHSsUh8RTxcRfFvupFL1AupUuj-)
-10. ![Screenshot 10](https://drive.google.com/uc?id=1167R9S_YbDHXkivV1kfw0lFgFOqDmf8t)
-11. ![Screenshot 11](https://drive.google.com/uc?id=1DKgX1AF4vHNJtGJ4uTgU0xUpsTm8TOiF)
-12. ![Screenshot 12](https://drive.google.com/uc?id=1B1W6WKzrRjXKhCjvwo4_XKpYO8yNcdg_)
-
 
 # PlaceX
 
@@ -64,6 +49,20 @@ Key Features:
 10. Placement Status Tracking: Admins can track the placement status of individual students and generate reports based on various criteria, helping identify trends and optimize the placement process.
 
 
+## Screenshots
+
+![Screenshot 1](https://drive.google.com/uc?id=1PHad1i7O1ZIwmC_bw1WqZJAIeuWw8atz)
+![Screenshot 2](https://drive.google.com/uc?id=1kd_iAp2kLYEjjUfLtnzmHPmluTxh63vz)
+![Screenshot 3](https://drive.google.com/uc?id=1iPKTH_o5S6fZsggqKHACE9CrZtRXylHD)
+![Screenshot 4](https://drive.google.com/uc?id=1_ymdSPuBByN_GZupSsXfC3tCklioEzf2)
+![Screenshot 5](https://drive.google.com/uc?id=1U73tMQatPZ3JDR5E3AgRSIxukZ0k9faz)
+![Screenshot 6](https://drive.google.com/uc?id=1LprXx3bFmcVNjkXVu4H_bceQzA0S-ldH)
+![Screenshot 7](https://drive.google.com/uc?id=1bi_xR59A0guLGA7uHttec250meI5Rks4)
+![Screenshot 8](https://drive.google.com/uc?id=1_NGkrq8a_lTh5f6xR3taaMlLyVrtTm6o)
+![Screenshot 9](https://drive.google.com/uc?id=10-UfStHSsUh8RTxcRfFvupFL1AupUuj-)
+![Screenshot 10](https://drive.google.com/uc?id=1167R9S_YbDHXkivV1kfw0lFgFOqDmf8t)
+![Screenshot 11](https://drive.google.com/uc?id=1DKgX1AF4vHNJtGJ4uTgU0xUpsTm8TOiF)
+![Screenshot 12](https://drive.google.com/uc?id=1B1W6WKzrRjXKhCjvwo4_XKpYO8yNcdg_)
 ## Tech Stack
 
 - **Frontend:**
