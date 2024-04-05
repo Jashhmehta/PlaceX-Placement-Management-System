@@ -1,70 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PlaceX
 
-## Available Scripts
+In the contemporary educational landscape, the role of technology in streamlining administrative 
+processes within academic institutions has become increasingly indispensable. Recognizing this 
+necessity, we present PlaceX, an innovative Placement Management System meticulously crafted 
+using the MERN stack. Aimed at revolutionizing the conventional practices of placement 
+management within colleges, PlaceX serves as a comprehensive solution designed specifically for 
+the exigencies of Placement Departments. Overview PlaceX embodies two integral modules: the 
+User Module and the Admin Module, each catering to distinct user personas while harmoniously 
+facilitating the seamless orchestration of placement-related activities. Through the User Module, 
+students gain access to a sophisticated platform where they can register their academic credentials, 
+explore opportunities presented by recruiting companies, track their application progress, and even 
+share insights through an interview experience repository. Conversely, the Admin Module 
+empowers placement officers with robust tools for managing student data, orchestrating 
+recruitment drives, and overseeing the placement process with precision. At the heart of PlaceX 
+lies a comprehensive array of technologies and libraries meticulously integrated to ensure optimal 
+performance and functionality. The backend API is developed using Node.js, while data storage 
+and management are handled by MongoDB, a versatile NoSQL database. Authentication and 
+authorization are implemented using JSON Web Tokens (JWT), providing a secure mechanism 
+for user validation. To enhance security further, bcrypt is employed for password hashing, ensuring 
+the protection of sensitive user data. Node mailer facilitates seamless communication by enabling 
+the system to send emails to users, keeping them informed about important updates and 
+notifications. Additionally, Express.js serves as a middleware, facilitating the handling of HTTP 
+requests and routes, while cookie-parser helps maintain user sessions effectively.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+Key Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Seamless Registration Process: Students can easily register on PlaceX by providing their academic details, creating an account securely.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Comprehensive Company Listing: PlaceX offers a comprehensive listing of companies, including job descriptions, eligibility criteria, and compensation packages, empowering students to explore various opportunities.
 
-### `npm test`
+3. Scheduled Interview Management: Students can view and manage their scheduled interviews, including date, time, and company information, ensuring they are well-prepared for each interview.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. FAQ Repository: A repository of frequently asked questions related to interviews provides valuable insights and tips for interview preparation, enhancing students' readiness.
 
-### `npm run build`
+5. Interview Experience Sharing: Students can share their interview experiences, including difficulty levels, outcomes, and insights, fostering collaboration and knowledge sharing among peers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Personalized Placement Notifications: Upon successful placement, students receive personalized notifications, acknowledging their achievements and providing motivation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. Robust Student Data Management: Admins can access and manage comprehensive student data, including academic records, application status, and placement outcomes, ensuring efficient tracking throughout the placement process.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+8. Dynamic Company Management Interface: Admins have the capability to add, update, and delete company listings, ensuring accurate and up-to-date information for students.
 
-### `npm run eject`
+9. Interview Report Generation: Admins can generate reports on student interviews, company engagement, and placement outcomes, providing valuable insights for decision-making.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+10. Placement Status Tracking: Admins can track the placement status of individual students and generate reports based on various criteria, helping identify trends and optimize the placement process.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Environment Variables
 
-## Learn More
+To run this project, you will need to add the following environment variables to your .env file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`PORTNO`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`KEY`
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+- [Jashmehta](https://www.github.com/Jashhmehta)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[Documentation](https://drive.google.com/file/d/14m90cazrFRmoZK9SeDl6klkimJmssWpe/view?usp=sharing)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Installation
 
-### Deployment
+Install my-project with npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Run Locally
 
-### `npm run build` fails to minify
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  git clone https://github.com/Jashhmehta/PlaceX-Placement-Management-System.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+## Screenshots
+
+![PlaceX Dashboard](https://drive.google.com/uc?id=1PHad1i7O1ZIwmC_bw1WqZJAIeuWw8atz)
