@@ -16,8 +16,9 @@ const Footer = () => {
       <h3>Founders</h3>
       <ul>
         <li>Jash Mehta</li>
-        <li>Priyanshi Mehta</li>
-        <li>Masrita Mangalarapu</li>
+        <li>Vaibhav Gholap</li>        
+        <li>Aayush Doshi</li>
+        <li>Shrinidhi Heda</li>
       </ul>
     </div>
   </div>

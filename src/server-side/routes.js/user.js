@@ -1,11 +1,12 @@
-import express from "express";
-import bcryt from "bcrypt";
+const express = require('express');
+const bcrypt = require('bcrypt'); // Change 'bcryt' to 'bcrypt'
 const router = express.Router();
-import { User } from "../models/user.js";
-import { Company } from "../models/Company.js";
-import { Interview } from "../models/Experience.js";
-import jwt from "jsonwebtoken";
-import nodemailer from "nodemailer";
+const {User} = require('../models/user.js'); // Use require for CommonJS
+const {Company} = require('../models/Company.js'); // Use require for CommonJS
+const {Interview} = require('../models/Experience.js'); // Use require for CommonJS
+const jwt = require('jsonwebtoken');
+const nodemailer = require('nodemailer');
+
 
 //---------------------------------------------USER ENDPOINTS--------------------------------------------------//
 
@@ -35,7 +36,7 @@ router.post("/register", async (req, res) => {
     return res.json({ message: "User already existed" });
   }
 
-  const hashpassword = await bcryt.hash(password, 10);
+  const hashpassword =  await bcrypt.hash(password, 10);
   const newUser = new User({
     name,
     email,
@@ -70,7 +71,7 @@ router.post("/", async (req, res) => {
     return res.json("Invalid User");
   }
 
-  const validPassword = await bcryt.compare(password, user.password);
+  const validPassword = await bcrypt.compare(password, user.password);
   if (!validPassword) {
     console.log("Password Incorrect");
     return res.json("Password Incorrect");
@@ -86,7 +87,7 @@ router.post("/", async (req, res) => {
     { expiresIn: "1h" }
   );
 
-  res.cookie("token", token, { httpOnly: true, maxAge: 300000 });
+  res.cookie("token", token, { httpOnly: true, maxAge: 1000000 });
 
   return res.json(user.isAdmin === "1" ? "Admin" : "Success");
 });
@@ -111,6 +112,7 @@ router.get("/verify", verifyUser, (req, res) => {
   return res.json({ status: true, message: "Authorized" });
 });
 
+
 // Route to fetch the current user's details.
 // It verifies the user's token and retrieves the user's information.
 router.get("/currentUser", verifyUser, async (req, res) => {
@@ -130,6 +132,23 @@ router.get("/currentUser", verifyUser, async (req, res) => {
     return res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+router.post('/logout', async (req, res) => {
+  try {
+    res.clearCookie('token'); // Replace 'token' with the actual name of your cookie if different
+
+    return res.status(200).json({ message: 'Logged out successfully' });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Error logging out' });
+  }
+});
+
+router.get('/runs',async(req,res)=>{
+  console.log("Runs")
+  res.send("Runing")
+})
+
 
 // This API is designed to handle the functionality of sending a reset password link via email to the user.
 router.post("/forgotpassword", async (req, res) => {
@@ -170,6 +189,7 @@ router.post("/forgotpassword", async (req, res) => {
   }
 });
 
+
 // This API endpoint is responsible for resetting the password of a user. It verifies the provided token,
 // then updates the user's password with the new hashed password. If the token is invalid, it returns an
 // error response indicating the token is invalid.
@@ -181,7 +201,7 @@ router.post("/resetPassword/:token", async (req, res) => {
     const decoded = await jwt.verify(token, process.env.KEY);
     const id = decoded.id;
 
-    const hashPassword = await bcryt.hash(password, 10);
+    const hashPassword = await bcrypt.hash(password, 10);
 
     await User.findByIdAndUpdate({ _id: id }, { password: hashPassword });
 
@@ -191,6 +211,8 @@ router.post("/resetPassword/:token", async (req, res) => {
     return res.status(400).json({ status: false, message: "Invalid Token" });
   }
 });
+
+
 
 //API to add a company ID to appliedCompanies array for a user
 router.post("/applyCompany/:userId/:companyId", async (req, res) => {
@@ -385,6 +407,45 @@ router.get("/getCompanies", async (req, res) => {
   }
 });
 
+  router.get("/getCompaniesFilter", verifyUser, async (req, res) => {
+    try {
+      // Get the current user
+      const token = req.cookies.token;
+      const decoded = jwt.verify(token, process.env.KEY);
+      const userId = decoded._id;
+
+      const user = await User.findById(userId);
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      // Get all companies
+      const allCompanies = await Company.find({});
+      console.log(allCompanies)
+      console.log(user)
+    // Filter companies based on user's qualifications
+    const eligibleCompanies = allCompanies.filter(company => {
+      return (
+        company.eligibilityCriteria.includes(user.stream) && // Stream/course eligibility
+        user.tenthPercentage >= company.tenthPercentage && // 10th percentage
+        user.twelfthPercentage >= company.twelfthPercentage && // 12th percentage
+        user.graduationCGPA >= company.graduationCGPA && // Graduation CGPA
+        (company.sixthSemesterCGPA === null || user.sixthSemesterCGPA === null || user.sixthSemesterCGPA >= company.sixthSemesterCGPA) // Sixth semester CGPA, handle null
+      );
+    });
+    
+    console.log("ELEIGIVBE COMAPNIES")
+    console.log(eligibleCompanies)
+
+      // Return the filtered eligible companies
+      res.json({ data: eligibleCompanies });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: "Internal Server Error" });
+    }
+  });
+
+
 // Route to update company data.
 // It updates the company details based on the provided ID.
 router.put("/updatecompany/:id", (req, res) => {
@@ -483,4 +544,4 @@ router.post("/updatePlacementStatus", async (req, res) => {
   }
 });
 
-export { router as UserRouter };
+module.exports  =  { UserRouter: router };

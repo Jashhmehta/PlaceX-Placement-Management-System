@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose')
 
 const InterviewExperienceSchema = new mongoose.Schema({
     username:{type: String, required: true},
@@ -10,4 +10,4 @@ const InterviewExperienceSchema = new mongoose.Schema({
 });
 
 const InterviewModel = mongoose.model("Interviewexperience", InterviewExperienceSchema);
-export { InterviewModel as Interview };
+module.exports =  {  Interview:InterviewModel };

@@ -2,11 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Admin-CSS/AdminNav.css";
-
+import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 function AdminNav() {
-  function handleLogout() {
-    
-  }
+
+  const navigate = useNavigate();
+
+
+  async function   handleLogout() {
+    console.log("CLICKS")
+    const response  = await axios.post('http://localhost:3001/auth/logout')
+    console.log(response)
+    navigate("/");
+
+ }
   return (
     <body>
       <nav className="navbar navbar-expand-lg fixed-top">
@@ -33,7 +42,7 @@ function AdminNav() {
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link mx-lg-2" to="/" onClick={handleLogout}>Logout</Link>
+                  <button className="nav-link mx-lg-2" to="/" onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>

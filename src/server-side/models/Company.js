@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 const CompanySchema = new mongoose.Schema({
     companyname: { type: String, required: true },
     jobprofile: { type: String, required: true},
@@ -14,4 +14,4 @@ const CompanySchema = new mongoose.Schema({
 });
 
 const CompanyModel = mongoose.model("Company", CompanySchema);
-export {CompanyModel as Company}
+module.exports =  { Company : CompanyModel}

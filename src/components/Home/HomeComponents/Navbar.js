@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Home-CSS/AdminNav.css';
-
+import axios from 'axios'
 const Navbar = () => {
-  function handleLogout() {
-    
+  async function   handleLogout() {
+     const response  = await axios.post('http://localhost:3001/auth/logout')
+     console.log(response)
   }
+
   
   return (
     <body>

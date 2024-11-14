@@ -16,8 +16,9 @@ const Footer = () => {
       <h3>Founders</h3>
       <ul>
         <li>Jash Mehta</li>
-        <li>Priyanshi Mehta</li>
-        <li>Masrita Mangalarapu</li>
+        <li>Vaibhav Gholap</li>
+        <li>Aayush Doshi</li>
+        <li>Shrinidhi Heda</li>
       </ul>
     </div>
   </div>
@@ -25,9 +26,7 @@ const Footer = () => {
   <div class="founders-section-2">
           <h3>Contact Us</h3>
           <ul>
-        <li>yash23@nmims.in</li>
-        <li>ashley12@nmims.in</li>
-        <li>lina56@nmims.in</li>
+     
       </ul>
       </div>
         </div>

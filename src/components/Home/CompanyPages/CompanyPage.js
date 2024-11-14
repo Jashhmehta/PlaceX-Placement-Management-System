@@ -6,12 +6,14 @@ import { getCompanies } from "../../../redux/companySlice.jsx";
 import Footer from "../HomeComponents/Footer.js";
 import Navbar from "../HomeComponents/Navbar.js";
 import ApplyJobs from "../Assets/applyjobs.png"
+
 function CompanyPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(null);
   const companies = useSelector((state) => state.companies.companies);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -37,6 +39,7 @@ function CompanyPage() {
       .get("http://localhost:3001/auth/currentUser")
       .then((res) => {
         setCurrentUser(res.data.user);
+        console.log("VAIBHAV " , res.data.user)
       })
       .catch((err) => {
         console.error("Error fetching current user:", err);
@@ -45,6 +48,11 @@ function CompanyPage() {
 
   const handleApply = async (companyId, userId) => {
     try {
+       if(currentUser.placementStatus==='Placed'){
+        alert("You are Already Placed ")
+       }
+       else
+       {
       const response = await axios.post(
         `http://localhost:3001/auth/applyCompany/${userId}/${id}`
       );
@@ -55,6 +63,8 @@ function CompanyPage() {
       );
       dispatch(getCompanies(updatedResponse.data));
       navigate("/scheduledInterview");
+
+    }
     } catch (error) {
       console.error(error);
       alert("Error applying to company");
