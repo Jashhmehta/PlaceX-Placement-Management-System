@@ -3,11 +3,21 @@ import axios from 'axios';
 import AdminHome from "../AdminHome.js";
 import Footer from "../AdminReusableComponents/AdminFooter.js";
 import '../Admin-CSS/ScheduledInterviewData.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function ScheduledInterviewData() {
   const [companyData, setCompanyData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    
+    axios.get("http://localhost:3001/auth/verify").then((res) => {
+      if (!res.data.status) {
+        navigate(`/`);
+      }
+    });
+
     const fetchCompanyData = async () => {
       try {
         const response = await axios.get('http://localhost:3001/auth/companyApplicants');

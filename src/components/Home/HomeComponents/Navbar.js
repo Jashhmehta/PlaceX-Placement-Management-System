@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Home-CSS/AdminNav.css';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
+  const navigate = useNavigate();
+
   async function   handleLogout() {
      const response  = await axios.post('http://localhost:3001/auth/logout')
      console.log(response)
+    navigate('/')
   }
 
   

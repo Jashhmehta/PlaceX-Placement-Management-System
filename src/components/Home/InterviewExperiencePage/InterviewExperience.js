@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import sanitizeHtml from 'sanitize-html';
 import Navbar from "../HomeComponents/Navbar.js";
+import { useNavigate } from 'react-router-dom';
+
 
 function InterviewExperience() {
   
   const [interviews, setInterviews] = useState([]);
-  
+  const navigate = useNavigate();
+
 
 
   const fetchInterviews = async () => {
@@ -27,7 +30,7 @@ function InterviewExperience() {
   useEffect(() => {
     axios.get("http://localhost:3001/auth/verify").then((res) => {
       if (!res.data.status) {
-        
+        navigate(`/`);
       }
     });
 

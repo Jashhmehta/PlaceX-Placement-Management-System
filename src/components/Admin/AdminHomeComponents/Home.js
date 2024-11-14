@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BannerBackground from "../Assets/home-banner-background.png";
 import BannerImage from "../Assets/interviewimg.png";
 import AdminHome from "./AdminHome.js";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 
 const Home = () => {
+ const navigate = useNavigate()
+  useEffect(()=>{
+    axios.get("http://localhost:3001/auth/verify").then((res) => {
+      if (!res.data.status) {
+        navigate(`/`);
+      }
+    });
+  },[])
   return (
 
     <div className="home-container" style={{marginTop:'100px'}}>

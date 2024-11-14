@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   stream: { type: String },
   sixthSemesterCGPA: { type: Number },
   isAdmin: { type: String },
-  placementStatus: { type: String, default: null },
+  placementStatus: { type: String, default: 'Unplaced' },
   companyPlaced: { type: String, default: null },
   appliedCompanies: [
     { type: mongoose.Schema.Types.ObjectId, ref: "companies" },

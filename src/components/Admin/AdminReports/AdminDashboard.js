@@ -58,7 +58,7 @@ function AdminDashboard() {
           user.graduationCGPA >= parseFloat(filters.graduationCGPA)) &&
         (!selectedProgram || user.stream === selectedProgram) &&
         (!filters.placementStatus ||
-          user.placementStatus === filters.placementStatus)
+          user.placementStatus ===  filters.placementStatus)
       );
     });
     setSelectedProgram("");

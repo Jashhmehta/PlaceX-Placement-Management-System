@@ -426,10 +426,11 @@ router.get("/getCompanies", async (req, res) => {
     // Filter companies based on user's qualifications
     const eligibleCompanies = allCompanies.filter(company => {
       return (
-        company.eligibilityCriteria.includes(user.stream) && // Stream/course eligibility
+        company.eligibilityCriteria.some(criterion => 
+          criterion.toLowerCase() === user.stream.toLowerCase()) && // Stream/course eligibility (case-insensitive)
         user.tenthPercentage >= company.tenthPercentage && // 10th percentage
         user.twelfthPercentage >= company.twelfthPercentage && // 12th percentage
-        user.graduationCGPA >= company.graduationCGPA && // Graduation CGPA
+        (company.graduationCGPA === null || user.graduationCGPA === null || user.graduationCGPA >= company.graduationCGPA) && 
         (company.sixthSemesterCGPA === null || user.sixthSemesterCGPA === null || user.sixthSemesterCGPA >= company.sixthSemesterCGPA) // Sixth semester CGPA, handle null
       );
     });
